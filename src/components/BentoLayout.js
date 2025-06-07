@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const BentoContainer = styled.div`
   display: grid;
@@ -23,6 +23,11 @@ const LeftColumn = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  @media (max-width: 768px) {
+    position: relative;
+    top: 0;
+  }
 `;
 
 const RightColumn = styled.div`
@@ -32,12 +37,12 @@ const RightColumn = styled.div`
   height: 100%;
   overflow-y: auto;
   padding-right: 12px;
-  
+
   /* Hide scrollbar for Chrome, Safari and Opera */
   &::-webkit-scrollbar {
     display: none;
   }
-  
+
   /* Hide scrollbar for IE, Edge and Firefox */
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -52,4 +57,4 @@ const BentoLayout = ({ leftColumn, rightColumn }) => {
   );
 };
 
-export default BentoLayout; 
+export default BentoLayout;
